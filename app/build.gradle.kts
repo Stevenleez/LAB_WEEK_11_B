@@ -43,6 +43,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("commons-io:commons-io:2.6")// build.gradle.kts (Kotlin DSL)
+
+    // Make sure you are using a recent Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:34.6.0")) // Or a newer version
+
+    // Use the main artifact for Firestore
+    implementation("com.google.firebase:firebase-firestore")
+
+//    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
